@@ -52,8 +52,6 @@ public class MainActivity extends AppCompatActivity {
     private void initializeViews() {
         doctorsRecyclerView = findViewById(R.id.doctorsRecyclerView);
         statusText = findViewById(R.id.statusText);
-        Button btnGetStarted = findViewById(R.id.btnGetStarted);
-        Button btnLearnMore = findViewById(R.id.btnLearnMore);
     }
 
     private void setupRecyclerView() {
