@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/white">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <!-- Toolbar -->
+        <com.google.android.material.appbar.MaterialToolbar
+            android:id="@+id/toolbar"
+            android:layout_width="match_parent"
+            android:layout_height="?attr/actionBarSize"
+            android:background="@color/white"
+            app:titleTextColor="@color/primary_green"
+            app:menu="@menu/main_menu">
+
+            <ImageView
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+                android:src="@drawable/ic_heart"
+                android:layout_marginStart="16dp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Vitalink"
+                android:textSize="20sp"
+                android:textStyle="bold"
+                android:textColor="@color/primary_green"
+                android:layout_marginStart="8dp" />
+
+        </com.google.android.material.appbar.MaterialToolbar>
+
+        <!-- Hero Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp"
+            android:background="@drawable/gradient_background">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Your Health, Our Priority"
+                android:textSize="32sp"
+                android:textStyle="bold"
+                android:textColor="@color/gray_800"
+                android:lineSpacingMultiplier="1.2" />
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Connect with certified healthcare professionals from the comfort of your home."
+                android:textSize="16sp"
+                android:textColor="@color/gray_600"
+                android:lineSpacingMultiplier="1.4"
+                android:layout_marginTop="16dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:layout_marginTop="32dp">
+
+                <Button
+                    android:id="@+id/btnGetStarted"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Get Started"
+                    android:backgroundTint="@color/primary_green"
+                    android:textColor="@color/white"
+                    android:layout_marginEnd="8dp"
+                    style="@style/Widget.Material3.Button" />
+
+                <Button
+                    android:id="@+id/btnLearnMore"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:text="Learn More"
+                    android:textColor="@color/primary_green"
+                    android:backgroundTint="@color/light_green"
+                    android:layout_marginStart="8dp"
+                    style="@style/Widget.Material3.Button.OutlinedButton" />
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+        <!-- Features Section -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="24dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Why Choose Vitalink?"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:textColor="@color/gray_800"
+                android:gravity="center"
+                android:layout_marginBottom="24dp" />
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/featuresRecyclerView"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginBottom="24dp" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>
