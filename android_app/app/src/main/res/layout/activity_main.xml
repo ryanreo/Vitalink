@@ -1,124 +1,113 @@
 <?xml version="1.0" encoding="utf-8"?>
-<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="@color/white">
+    android:orientation="vertical"
+    android:background="@color/white"
+    android:padding="16dp">
 
+    <!-- Status Bar -->
+    <TextView
+        android:id="@+id/statusText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/light_green"
+        android:padding="12dp"
+        android:text="Connecting to Vitalink..."
+        android:textColor="@color/gray_800"
+        android:textStyle="bold"
+        android:gravity="center" />
+
+    <!-- Header -->
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical">
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginTop="16dp"
+        android:layout_marginBottom="24dp">
 
-        <!-- Toolbar -->
-        <com.google.android.material.appbar.MaterialToolbar
-            android:id="@+id/toolbar"
-            android:layout_width="match_parent"
-            android:layout_height="?attr/actionBarSize"
-            android:background="@color/white"
-            app:titleTextColor="@color/primary_green"
-            app:menu="@menu/main_menu">
+        <ImageView
+            android:layout_width="48dp"
+            android:layout_height="48dp"
+            android:src="@drawable/ic_heart"
+            android:layout_marginEnd="12dp" />
 
-            <ImageView
-                android:layout_width="40dp"
-                android:layout_height="40dp"
-                android:src="@drawable/ic_heart"
-                android:layout_marginStart="16dp" />
-
-            <TextView
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="Vitalink"
-                android:textSize="20sp"
-                android:textStyle="bold"
-                android:textColor="@color/primary_green"
-                android:layout_marginStart="8dp" />
-
-        </com.google.android.material.appbar.MaterialToolbar>
-
-        <!-- Hero Section -->
-        <LinearLayout
-            android:layout_width="match_parent"
+        <TextView
+            android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="24dp"
-            android:background="@drawable/gradient_background">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Your Health, Our Priority"
-                android:textSize="32sp"
-                android:textStyle="bold"
-                android:textColor="@color/gray_800"
-                android:lineSpacingMultiplier="1.2" />
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Connect with certified healthcare professionals from the comfort of your home."
-                android:textSize="16sp"
-                android:textColor="@color/gray_600"
-                android:lineSpacingMultiplier="1.4"
-                android:layout_marginTop="16dp" />
-
-            <LinearLayout
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:orientation="horizontal"
-                android:layout_marginTop="32dp">
-
-                <Button
-                    android:id="@+id/btnGetStarted"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Get Started"
-                    android:backgroundTint="@color/primary_green"
-                    android:textColor="@color/white"
-                    android:layout_marginEnd="8dp"
-                    style="@style/Widget.Material3.Button" />
-
-                <Button
-                    android:id="@+id/btnLearnMore"
-                    android:layout_width="0dp"
-                    android:layout_height="wrap_content"
-                    android:layout_weight="1"
-                    android:text="Learn More"
-                    android:textColor="@color/primary_green"
-                    android:backgroundTint="@color/light_green"
-                    android:layout_marginStart="8dp"
-                    style="@style/Widget.Material3.Button.OutlinedButton" />
-
-            </LinearLayout>
-
-        </LinearLayout>
-
-        <!-- Features Section -->
-        <LinearLayout
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:orientation="vertical"
-            android:padding="24dp">
-
-            <TextView
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:text="Why Choose Vitalink?"
-                android:textSize="24sp"
-                android:textStyle="bold"
-                android:textColor="@color/gray_800"
-                android:gravity="center"
-                android:layout_marginBottom="24dp" />
-
-            <androidx.recyclerview.widget.RecyclerView
-                android:id="@+id/featuresRecyclerView"
-                android:layout_width="match_parent"
-                android:layout_height="wrap_content"
-                android:layout_marginBottom="24dp" />
-
-        </LinearLayout>
+            android:text="Vitalink"
+            android:textSize="28sp"
+            android:textStyle="bold"
+            android:textColor="@color/primary_green" />
 
     </LinearLayout>
 
-</ScrollView>
+    <!-- Hero Section -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Your Health, Our Priority"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        android:textColor="@color/gray_800"
+        android:lineSpacingMultiplier="1.2"
+        android:layout_marginBottom="12dp" />
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Connect with certified healthcare professionals from the comfort of your home."
+        android:textSize="16sp"
+        android:textColor="@color/gray_600"
+        android:lineSpacingMultiplier="1.4"
+        android:layout_marginBottom="24dp" />
+
+    <!-- Action Buttons -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginBottom="32dp">
+
+        <Button
+            android:id="@+id/btnGetStarted"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Find Doctors"
+            android:backgroundTint="@color/primary_green"
+            android:textColor="@color/white"
+            android:layout_marginEnd="8dp"
+            style="@style/Widget.Material3.Button" />
+
+        <Button
+            android:id="@+id/btnLearnMore"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Learn More"
+            android:textColor="@color/primary_green"
+            android:backgroundTint="@color/light_green"
+            android:layout_marginStart="8dp"
+            style="@style/Widget.Material3.Button.OutlinedButton" />
+
+    </LinearLayout>
+
+    <!-- Doctors List -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Available Doctors"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:textColor="@color/gray_800"
+        android:layout_marginBottom="16dp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/doctorsRecyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+</LinearLayout>
